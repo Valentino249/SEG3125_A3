@@ -142,7 +142,7 @@ export default function Board() {
         </div>
       )}
 
-      <div className="grid">
+      <div className="grid-4">
         {cards.map((card) => {
           const faceUp = isCardFaceUp(card);
 
