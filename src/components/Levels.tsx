@@ -5,6 +5,8 @@ import Level3 from "./Level3.tsx"
 import Level4 from "./Level4.tsx"
 import Level5 from "./Level5.tsx"
 import { useState } from "react"
+import { FaHome } from "react-icons/fa";
+
 
   interface LevelsProps {
   onNavigate: (page: string) => void;
@@ -37,9 +39,11 @@ function renderLevel() {
     return (
         <>
             <div className="flex flex-col">
-                <p className="text-center">Levels</p>
-                <button className="mt-2 mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={() => onNavigate("home")}>Home</button>
+                <p className="text-center font-bold text-2xl mt-10">Levels</p>
+                <button className="mt-2 mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center items-center gap-2"
+                onClick={() => onNavigate("home")}>Home
+                <FaHome/>
+                </button>
 
                 {(selectedLevel != 0) && <button className="mt-2 mb-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                 onClick={() => setSelectedLevel(0)}>Levels</button>}
