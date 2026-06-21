@@ -7,7 +7,7 @@ type Card = {
   isMatched: boolean;
 };
 
-const SYMBOLS = ["A", "B", "C", "D"];
+const SYMBOLS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
 function shuffleArray<T>(array: T[]): T[] {
   const copy = [...array];
@@ -142,7 +142,7 @@ export default function Level1() {
         </div>
       )}
 
-      <div className="grid-4">
+      <div className="grid-6">
         {cards.map((card) => {
           const faceUp = isCardFaceUp(card);
 

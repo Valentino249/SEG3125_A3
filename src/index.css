@@ -56,15 +56,21 @@ body {
   font-weight: bold;
 }
 
-.grid {
+.grid-6 {
   display: grid;
-  grid-template-columns: repeat(4, minmax(80px, 1fr));
+  grid-template-columns: repeat(6, minmax(80px, 120px));
+  gap: 14px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 120px));
   gap: 14px;
 }
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  grid-template-columns: repeat(2, minmax(80px, 120px));
   gap: 14px;
 }
 

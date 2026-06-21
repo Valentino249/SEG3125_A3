@@ -7,7 +7,7 @@ type Card = {
   isMatched: boolean;
 };
 
-const SYMBOLS = ["A", "B", "C", "D"];
+const SYMBOLS = ["A", "B", "C", "D", "E", "F"];
 
 function shuffleArray<T>(array: T[]): T[] {
   const copy = [...array];
