@@ -1,4 +1,120 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.memory-game {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.memory-game h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.game-info button {
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.game-info button:hover {
+  opacity: 0.9;
+}
+
+.win-banner {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #dff7df;
+  border: 1px solid #9fd69f;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 1fr));
+  gap: 14px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #1f2937;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: transform 0.15s ease, background 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.card:disabled {
+  cursor: default;
+}
+
+.card.flipped {
+  background: #ffffff;
+  color: #111827;
+  border: 2px solid #d1d5db;
+}
+
+.card.matched {
+  background: #c7f9cc;
+  color: #14532d;
+  border: 2px solid #86efac;
+}
+
+.card-inner {
+  display: inline-block;
+  transform: scale(1);
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(60px, 1fr));
+  }
+
+  .card {
+    font-size: 1.5rem;
+  }
+}
 /* 
 :root {
   --text: #6b6375;
