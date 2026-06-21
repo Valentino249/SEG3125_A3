@@ -130,7 +130,7 @@ export default function Board() {
     <div className="memory-game">
 
       <div className="game-info">
-        <p>
+        <p className="text-olive-100">
           <strong>Moves:</strong> {moves}
         </p>
         <button onClick={resetGame}>Restart Game</button>
