@@ -38,18 +38,20 @@ function renderLevel() {
   }
     return (
         <>
-            <div className="flex flex-col">
-                <p className="text-center font-bold text-2xl mt-10">Levels</p>
-                <button className="mt-2 mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center items-center gap-2"
+            <div className="min-h-screen flex flex-col">
+                <div className="ml-3 mr-3">
+                <p className="italic text-olive-100 font-bold text-9xl mt-10">Levels</p>
+                <button className="mt-2 mb-2 bg-gray-700 hover:bg-blue-700 text-white w-full font-bold py-2 px-10 shadow-xl/30 flex items-center gap-2"
                 onClick={() => onNavigate("home")}>Home
                 <FaHome/>
                 </button>
 
-                {(selectedLevel != 0) && <button className="mt-2 mb-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                {(selectedLevel != 0) && <button className="mt-2 mb-2 bg-gray-700 hover:bg-blue-700 text-white w-full font-bold py-2 px-10 shadow-xl/30 flex items-center gap-2"
                 onClick={() => setSelectedLevel(0)}>Levels</button>}
 
                 <div className="mt-2">
                     {renderLevel()}
+                </div>
                 </div>
             </div>
         </>
