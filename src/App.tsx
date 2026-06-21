@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Levels from "./components/Levels.tsx"
 import Endless from "./components/Endless.tsx"
-import Home from "./components/Home.tsx"
 import Home2 from "./components/Home2.tsx"
 
 import './App.css'
